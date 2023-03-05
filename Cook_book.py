@@ -18,7 +18,7 @@ with open('1.txt', encoding='utf-8') as file:
         cook_book[dish] = ingredients
         file.readline()
 
-
+all_dishes = input("Занеси необходимые блюда: ").split(', ')
 def get_shop_list_by_dishes(dishes, person_count):
     ingr_list = []
     for dish in dishes:

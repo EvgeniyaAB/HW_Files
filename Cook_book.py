@@ -29,10 +29,10 @@ def get_shop_list_by_dishes(dishes, person_count):
     for ingr in ingr_list:
         if ingr['ingredient_name'] not in ingredient_dish_list:
             ingredient_dish_list[ingr['ingredient_name']] = {'measure': ingr['measure'],
-                                                             'quantity': ingr['quantity'] * int(person_count)}
+                                                             'quantity': int(ingr['quantity']) * int(person_count)}
         else:
-            ingredient_dish_list[ingr['ingredient_name']] = ingredient_dish_list[ingr['ingredient_name']]['quantity'] + \
-                                                            ingr['quantity'] * int(person_count)
+            ingredient_dish_list[ingr['ingredient_name']] = {'measure': ingr['measure'], 'quantity': ingredient_dish_list[ingr['ingredient_name']]['quantity'] + \
+                                                                                                     int(ingr['quantity']) * int(person_count)}
 
     return ingredient_dish_list
 

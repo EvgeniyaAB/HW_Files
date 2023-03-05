@@ -15,8 +15,8 @@ with open('1.txt', encoding='utf-8') as file:
                  'measure': measure
                 }
             )
-    cook_book[dish] = ingredients
-    file.readline()
+        cook_book[dish] = ingredients
+        file.readline()
 
 
 def get_shop_list_by_dishes(dishes, person_count):
